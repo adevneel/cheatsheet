@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Cheatsheet</title>
+    <link href="./styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>Form Cheatsheet</h1>
+    <section class="elements">
+      <h2>Elements</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="form">
+            <td class="column-1">
+              <span class="code">&lt;form&gt;</span>
+            </td>
+            <td class="column-2">Form</td>
+            <td class="column-3">
+              Used to collect and send information to an external source.
+              <hr />
+              Requires <span class="code">action</span> and
+              <span class="code">method</span> attributes.
+            </td>
+          </tr>
+          <tr class="input">
+            <td class="column-1">
+              <span class="code">&lt;input&gt;</span>
+            </td>
+            <td class="column-2">Input</td>
+            <td class="column-3">
+              Used to render a variety of input fields on a webpage including
+              text fields, checkboxes, buttons, etc.
+              <hr />
+              Requires <span class="code">type</span>
+              <span class="code">id</span> and
+              <span class="code">name</span> attributes. <br />The
+              <span class="code">for</span> attribute is also used for the
+              <span class="code">&lt;datalist&gt;</span> element.
+            </td>
+          </tr>
+          <tr class="textarea">
+            <td class="column-1">
+              <span class="code">&lt;textarea&gt;</span>
+            </td>
+            <td class="column-2">Textarea</td>
+            <td class="column-3">
+              Used when creating a text-box for multi-line input (e.g. a comment
+              section).
+              <hr />
+              Requires the <span class="code">name</span> attribute and supports
+              the <span class="code">rows</span> and
+              <span class="code">cols</span> attributes which determine the
+              height and width of the element.
+            </td>
+          </tr>
+          <tr class="select">
+            <td class="column-1">
+              <span class="code">&lt;select&gt;</span>
+            </td>
+            <td class="column-2">Select</td>
+            <td class="column-3">
+              Used to create a dropdown list. A list of choices for the dropdown
+              list can be created using one or more
+              <span class="code">option</span> elements.
+              <hr />
+              Requires the <span class="code">name</span> attribute and the
+              <span class="code">option</span> element requires a
+              <span class="code">value</span> attribute.
+            </td>
+          </tr>
+          <tr class="datalist">
+            <td class="column-1">
+              <span class="code">&lt;datalist&gt;</span>
+            </td>
+            <td class="column-2">Datalist</td>
+            <td class="column-3">
+              Used to achieve a basic search/autocomplete functionality, with
+              the list of data being shown as a dropdown. As the user starts
+              typing, the list will be updated to show elements that best match
+              what has been typed into the input field. The actual list items
+              are specified as multiple
+              <span class="code">option</span> elements nested inside the
+              datalist.
+              <hr />
+              Requires an <span class="code">id</span> attribute that matches
+              the value of the <span class="code">&lt;input&gt;</span>'s
+              <span class="code">list</span> attribute, with the
+              <span class="code">option</span> elements requiring
+              <span class="code">value</span> attributes.
+            </td>
+          </tr>
+          <tr class="label">
+            <td class="column-1">
+              <span class="code">&lt;label&gt;</span>
+            </td>
+            <td class="column-2">Label</td>
+            <td class="column-3">
+              Provides identification for a specific
+              <span class="code">&lt;input&gt;</span> based on matching values
+              of the <span class="code">&lt;input&gt;</span>’s
+              <span class="code">id</span> attribute and the
+              <span class="code">&lt;label&gt;</span>’s
+              <span class="code">for</span> attribute.
+              <hr />
+              Requires a <span class="code">for</span> attribute that matches
+              the associated element's <span class="code">id</span> attribute.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+    </section>
+    <section class="attributes">
+      <h2>Attributes</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Attribute</th>
+            <th>Association</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="name">
+            <td class="column-1">
+              <span class="code">name</span>
+            </td>
+            <td class="column-2">
+              &lt;input&gt;, &lt;textarea&gt;, &lt;select&gt;
+            </td>
+            <td class="column-3">
+              In order for a form to send data, it needs to be able to put it
+              into key-value pairs. This is achieved by setting the
+              <span class="code">name</span> attribute of the
+              <span class="code">input</span> element.
+            </td>
+          </tr>
+          <tr class="required">
+            <td class="column-1">
+              <span class="code">required</span>
+            </td>
+            <td class="column-2">&lt;input&gt;</td>
+            <td class="column-3">
+              Specifies that the field must include a value; can't be left
+              blank.
+            </td>
+          </tr>
+          <tr class="max">
+            <td class="column-1">
+              <span class="code">max</span>
+            </td>
+            <td class="column-2">&lt;input type="number"&gt;</td>
+            <td class="column-3">
+              Specifies the maximum value for the input fieldin
+              <span class="code">number</span> type
+              <span class="code">&lt;input&gt;</span> elements.
+            </td>
+          </tr>
+          <tr class="min">
+            <td class="column-1">
+              <span class="code">min</span>
+            </td>
+            <td class="column-2">&lt;input type="number"&gt;</td>
+            <td class="column-3">
+              Specifies the minimum value for the input field in
+              <span class="code">number</span> type
+              <span class="code">&lt;input&gt;</span> elements.
+            </td>
+          </tr>
+          <tr class="maxlength">
+            <td class="column-1">
+              <span class="code">maxlength</span>
+            </td>
+            <td class="column-2">&lt;input type="text"&gt;</td>
+            <td class="column-3">
+              Specifies the maximum number of characters that can be entered
+              into the field in <span class="code">text</span> type
+              <span class="code">&lt;input&gt;</span> elements.
+            </td>
+          </tr>
+          <tr class="minlength">
+            <td class="column-1">
+              <span class="code">minlength</span>
+            </td>
+            <td class="column-2">&lt;input type="text"&gt;</td>
+            <td class="column-3">
+              Specifies the minimum number of characters that can be entered
+              into the field in <span class="code">text</span> type
+              <span class="code">&lt;input&gt;</span> elements.
+            </td>
+          </tr>
+          <tr class="pattern">
+            <td class="column-1">
+              <span class="code">pattern</span>
+            </td>
+            <td class="column-2">&lt;input type="text"&gt;</td>
+            <td class="column-3">
+              Uses a regular expression to match against (or validate) the value
+              of the <span class="code">&lt;input&gt;</span>, when the form is
+              submitted.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+    </section>
+    <section class="types">
+      <h2>Input Types</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Input Type</th>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="text">
+            <td class="column-1">
+              <span class="code">type="text"</span>
+            </td>
+            <td class="column-2">Text</td>
+            <td class="column-3">
+              A single row input field that users can type text inside.
+            </td>
+          </tr>
+          <tr class="checkbox">
+            <td class="column-1">
+              <span class="code">type="checkbox"</span>
+            </td>
+            <td class="column-2">Checkbox</td>
+            <td class="column-3">
+              A single checkbox item; users can select single or multiple
+              options.
+              <hr />
+              Requires including a <span class="code">value</span> attribute.
+            </td>
+          </tr>
+          <tr class="number">
+            <td class="column-1">
+              <span class="code">type="number"</span>
+            </td>
+            <td class="column-2">Number</td>
+            <td class="column-3">
+              An input field that allows the user to enter only numbers and a
+              few special characters inside the field.
+              <hr />
+              Can include a <span class="code">step</span> attribute which
+              creates arrows inside the input field to increase or decrease by
+              the value of the <span class="code">step</span> attribute.
+            </td>
+          </tr>
+          <tr class="range">
+            <td class="column-1">
+              <span class="code">type="range"</span>
+            </td>
+            <td class="column-2">Range</td>
+            <td class="column-3">
+              A range slider that acts as a selector between a
+              <span class="code">min</span> and a
+              <span class="code">max</span> value.
+              <hr />
+              Can include a <span class="code">step</span> attribute which
+              createsarrows inside the input field to increase or decrease by
+              the value of the <span class="code">step</span> attribute.
+            </td>
+          </tr>
+          <tr class="radio">
+            <td class="column-1">
+              <span class="code">type="radio"</span>
+            </td>
+            <td class="column-2">Radio</td>
+            <td class="column-3">
+              This renders a single radio button; only a single option can be
+              selected from a group of radio buttons.
+              <hr />
+              Requires including a <span class="code">value</span> attribute.
+            </td>
+          </tr>
+          <tr class="password">
+            <td class="column-1">
+              <span class="code">type="password"</span>
+            </td>
+            <td class="column-2">Password</td>
+            <td class="column-3">
+              A single row input field which allows the user to type censored
+              text inside the field.
+              <hr />
+              Can include a <span class="code">pattern</span> attribute, which
+              is used to match against (or validate) the value of the
+              <span class="code">&lt;input&gt;</span> when the form is
+              submitted.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+    </section>
+    <section class="button">
+      <h2>Submit Button</h2>
+      <p>
+        HTML <span class="code">&lt;input&gt;</span> elements can have a type
+        attribute set to submit, by adding
+        <span class="code">type="submit"</span>. With this attribute included, a
+        submit button will be rendered and, by default, will submit the
+        <span class="code">&lt;form&gt;</span> and execute its action.<br /><br />The
+        text of a submit button is set to <span class="code">submit</span> by
+        default but can also be changed by modifying the
+        <span class="code">value</span> attribute.
+      </p>
+    </section>
+    <br />
+  </body>
+</html>
